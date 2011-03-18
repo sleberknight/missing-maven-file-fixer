@@ -1,0 +1,15 @@
+Over time you accumulate cruft in Maven repos; maybe there are missing SHA1 files or POM files
+and you're getting stupid errors from Maven about bad checksums, etc. etc. Here are several simple
+scripts to regenerate all missing sha1 files as well as shell POM files (with enough information
+so Maven stops yelling at you).
+
+To add missing sha1 files:
+Place add-missing-sha1-hashes.sh and make-sha1.sh in your Maven repository root directory, and make
+them executable. If you are on Mac OS X instead of Linux, you'll need to also add the sha1sum
+script and make sure it's on your path. You can add it to /usr/bin which is where it is in Linux.
+Then run add-missing-sha1-hashes.sh and voila!
+
+To add missing POM files:
+Place the add-missing-poms.sh shell script and the make_poms.rb Ruby script in your Maven
+repository root directory. Make the shell script executable. Ruby should be on your path as well.
+Then run add-missing-poms.sh and voila!
