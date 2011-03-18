@@ -1,0 +1,4 @@
+#!/bin/bash
+# Needed on Mac OS X, which doesn't have the sha1sum command
+# Put in /usr/bin. Alternatively, put it anywhere you like and add it to your PATH.
+/usr/bin/openssl sha1 $1 | awk '{print $2}'
